@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="allegrofilter" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\allegrofilter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg -lgmon" />
+					<Add library="liballd" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\allegrofilter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-march=pentium3" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="liballeg" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="third-party\include" />
+		</Compiler>
+		<Linker>
+			<Add library="libpng" />
+			<Add directory="third-party\libs" />
+		</Linker>
+		<Unit filename="DistanceShader.hpp" />
+		<Unit filename="Scanliner.hpp" />
+		<Unit filename="ShaderEngine.hpp" />
+		<Unit filename="ShaderProcesor.hpp" />
+		<Unit filename="XYDistanceShader.hpp" />
+		<Unit filename="abc.png" />
+		<Unit filename="bin\Debug\alld42.dll">
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="bin\Debug\libpng13.dll" />
+		<Unit filename="bin\Debug\zlib1.dll" />
+		<Unit filename="bin\Release\alleg42.dll">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="run.cfg" />
+		<Unit filename="test.dig.png" />
+		<Unit filename="third-party\include\loadpng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="third-party\include\loadpng.h" />
+		<Unit filename="third-party\include\regpng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="third-party\include\savepng.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
